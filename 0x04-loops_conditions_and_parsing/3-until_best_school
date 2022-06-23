@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times with until loop.
+max=1
+# -lt es "menor que"
+until [ 10 -lt $max ]
+do
+  echo "Best School"
+  ((max++))
+done
