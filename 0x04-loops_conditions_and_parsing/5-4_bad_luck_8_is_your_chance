@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Bash script that loops from 1 to 10 and displays three phrases
 contador=1
-
 while [ $contador -le 10 ]
 do
   if [[ "$contador" == '4' ]]
@@ -9,13 +8,15 @@ do
     echo "bad luck"
     ((contador++))
     continue
-  fi
-  if [[ "$contador" == '8' ]]
+
+  elif [[ "$contador" == '8' ]]
   then
     echo "good luck"
     ((contador++))
     continue
-  fi
+
+  else
   echo "Best School"
   ((contador++))
+  fi
 done
