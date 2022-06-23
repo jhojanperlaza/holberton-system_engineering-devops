@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+list=$(ls)
+
+for file in $list
+do
+  echo "${file//*-}"
+done
