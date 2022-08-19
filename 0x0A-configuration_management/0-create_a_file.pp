@@ -4,4 +4,5 @@ file { '/tmp/school': #the path of the new file
     owner   => 'www-data',
     group   => 'www-data',
     mode    => '0744', #this are the permissions
+    path    => '/tmp/school'
 }
