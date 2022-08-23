@@ -1,6 +1,10 @@
 #  SSH configuration file so that you can connect
 # to a server without typing a password.
-exec {'echo':
-    command  => 'usr/bin/echo "    IdentityFile ~/.ssh/id_rsa\n    PasswordAuthentication no" >> ~/etc/ssh/ssh_config',
+exec {' SSH configuration file':
+    command  => 'usr/bin/echo "    IdentityFile ~/.ssh/id_rsa',
+    provider => 'shell',
+}
+exec {' SSH configuration file':
+    command  => 'usr/bin/echo "    PasswordAuthentication no" >> ~/etc/ssh/ssh_config',
     provider => 'shell',
 }
