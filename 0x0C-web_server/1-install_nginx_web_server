@@ -7,5 +7,5 @@
 #    contains the string "Hello World"
 sudo apt-get -y update
 sudo apt-get -y install nginx
-echo "Hello World" > /var/www/html/new_index.html
+echo "Hello World" > /var/www/html/index.html
 service nginx start
