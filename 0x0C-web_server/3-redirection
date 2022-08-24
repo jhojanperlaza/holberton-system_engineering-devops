@@ -14,5 +14,5 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 echo "Hello World" > /var/www/html/index.html
-sed -i "s/string_to_replace/$new_string/" file
+sed -i "s/string_to_replace/pilas/" file
 service nginx start
