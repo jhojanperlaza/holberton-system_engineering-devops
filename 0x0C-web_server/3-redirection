@@ -18,3 +18,7 @@ new_string="rewrite ^/redirect_me https://www.youtube.com/watch?v=He8mde-a_QY&ab
 string_to_replace="# as directory, then fall back to displaying a 404."
 sed -i "/$string_to_replace/ a $new_string" /etc/nginx/sites-enabled/default
 service nginx start
+#nota: con la flag a inclui la new_string abajo de un comentario predeterminado del
+#      archivo de configuracion nginx , utilice los siguientes links:
+# https://stackoverflow.com/questions/26041088/sed-replace-line-with-multiline-variable
+# https://ubiq.co/tech-blog/how-to-redirect-location-to-another-domain-in-nginx/ 
