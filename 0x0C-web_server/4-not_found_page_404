@@ -14,8 +14,8 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 echo "Hello World" > /var/www/html/index.html
+echo "Ceci n'est pas une page" > /var/www/html/error.html
 new_string="error_page 404 /error.html;\n location = /error.html {\n root /var/www/html;\n internal;\n}"
 string_to_replace="# as directory, then fall back to displaying a 404."
 sed -i "/$string_to_replace/ a $new_string" /etc/nginx/sites-enabled/default
 service nginx start
-
