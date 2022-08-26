@@ -17,7 +17,7 @@ echo "Hello World" > /var/www/html/index.html
 echo "Ceci n'est pas une page" > /var/www/html/error.html
 new_string_1="error_page 404 /error.html;\n location = /error.html {\n root /var/www/html;\n internal;\n}"
 new_string_2="rewrite ^/redirect_me https://www.youtube.com/watch?v=He8mde-a_QY&ab_channel=LETRASRD permanent;"
-new_string_3="add_header X-Served-By \"$HOSTNAME\""
+new_string_3="add_header X-Served-By $HOSTNAME;"
 string_to_replace="# as directory, then fall back to displaying a 404."
 sudo sed -i "/$string_to_replace/ a $new_string_1" /etc/nginx/sites-enabled/default
 sudo sed -i "/$string_to_replace/ a $new_string_2" /etc/nginx/sites-enabled/default
