@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# this script: Install and configure HAproxy on your lb-01 server.
+sudo apt-get -y update
+sudo apt-get -y install haproxy
+
+new_string="frontend http_front\n bind *:80\n default_backend http_back\n backend http_back\n balance roundrobin\n server 4739-web-01 3.91.46.188\n server 4739-web-02 34.207.144.236"
+string_to_replace="errorfile 504 /etc/haproxy/errors/504.http"
+sudo sed -i "/$string_to_replace/ a $new_string_1" /etc/haproxy/haproxy.cfg
+sudo service nginx start
