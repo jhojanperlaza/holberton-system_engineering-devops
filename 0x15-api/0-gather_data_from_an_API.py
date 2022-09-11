@@ -23,7 +23,7 @@ if __name__ == "__main__":
             all_tasks += 1
             if element['completed'] is True:
                 completed_tasks += 1
-            task_title.append(element['title'])
+                task_title.append(element['title'])
     print("Employee {} is done with tasks({}/{}):".format(rq_user_name,
-          all_tasks, completed_tasks))
+          completed_tasks, all_tasks))
     print("\t{}".format('\n\t'.join(map(str, task_title))))
