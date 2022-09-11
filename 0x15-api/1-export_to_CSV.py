@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-""" Python script that, using this REST API,
-for a given employee ID, returns information
-about his/her TODO list progress."""
+"""
+Python script to export data in the CSV format.
+link: https://www.youtube.com/watch?v=uCv5zGPGgb4&ab_channel=ProCodeTv
+link: https://www.adamsmith.haus/python/examples/
+      3278/csv-write-to-a-csv-file-and-quote-all-fields
+"""
 
 import csv
 import requests
