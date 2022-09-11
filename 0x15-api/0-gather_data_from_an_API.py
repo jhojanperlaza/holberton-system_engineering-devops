@@ -26,4 +26,4 @@ if __name__ == "__main__":
                 task_title.append(element['title'])
     print("Employee {} is done with tasks({}/{}):".format(rq_user_name,
           completed_tasks, all_tasks))
-    print("\t{}".format('\n\t'.join(map(str, task_title))))
+    print("\t {}".format('\n\t '.join(map(str, task_title))))
