@@ -9,7 +9,7 @@ import sys
 if __name__ == "__main__":
     url_todos = 'https://jsonplaceholder.typicode.com/todos'
     url_user = 'https://jsonplaceholder.typicode.com/users/{}'.format(
-        2)
+        sys.argv[1])
 
     rq_user_name = requests.get(url_user).json()['username']
     rq_todos = requests.get(url_todos).json()
@@ -19,7 +19,7 @@ if __name__ == "__main__":
     dict_save = {}
 
     for element in rq_todos:
-        if element['userId'] == int(2):
+        if element['userId'] == int(sys.argv[1]):
             dict_save = {
                 'task': element['title'],
                 'completed': element['completed'],
@@ -27,8 +27,8 @@ if __name__ == "__main__":
                 }
             list_save.append(dict_save)
 
-    format_save[2] = list_save
+    format_save[sys.argv[1]] = list_save
 
-    with open("{}.json".format(2), 'w',) as file:
+    with open("{}.json".format(sys.argv[1]), 'w',) as file:
         str_json = json.dumps(format_save)
         file.write(str_json)
